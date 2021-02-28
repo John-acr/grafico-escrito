@@ -8,9 +8,10 @@ export async function getData() {
 export function sortByDate(data) {
   return import('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js')
   .then(() => {
-    const recovered = _.sortBy(Object.values(data.recovered), ['date'])
-    const deaths = _.sortBy(Object.values(data.deaths), ['date'])
-    const confirmed = _.sortBy(Object.values(data.confirmed), ['date'])
+    const recovered = _.sortBy(Object.values(data.Recovered), ['date'])
+    const deaths = _.sortBy(Object.values(data.Deaths), ['date'])
+    const confirmed = _.sortBy(Object.values(data.Confirmed), ['date'])
+    const active = _.sortBy(Object.values(data.Active), ['date'])
     return {
       recovered,
       deaths,
@@ -25,6 +26,7 @@ export async function getTotalCasesByDate() {
     confirmed: {},
     recovered: {},
     deaths: {},
+    active: {},
   }
   data.forEach((item) => {
     try {
