@@ -18,9 +18,10 @@
         confirmed,
         deaths,
         recovered,
+        active,
       } = data
       const chart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
           labels: confirmed.map(item => new Intl.DateTimeFormat('es-MX', { month: 'long', day: 'numeric' }).format(new Date(item.date))),
           datasets: [
