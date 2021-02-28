@@ -21,7 +21,7 @@
         active,
       } = data
       const chart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels: confirmed.map(item => new Intl.DateTimeFormat('es-MX', { month: 'long', day: 'numeric' }).format(new Date(item.date))),
           datasets: [
