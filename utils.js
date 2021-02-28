@@ -16,6 +16,7 @@ export function sortByDate(data) {
       recovered,
       deaths,
       confirmed,
+      active,
     }
   })
 }
