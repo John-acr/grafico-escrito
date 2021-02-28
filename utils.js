@@ -1,7 +1,7 @@
 
 export async function getData() {
   // const response = await fetch('https://api.covid19api.com/all')
-  const response = await fetch('https://api.covid19api.com/total/dayone/country/peru/status/confirmed')
+  const response = await fetch('https://api.covid19api.com/total/country/peru')
   const data = await response.json()
   return data
 }
